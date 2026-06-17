@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Card Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- FORM SECTION -->
+    <div class="form-section">
+        <h2>Create Your Card</h2>
+
+        <input type="text" id="nameInput" placeholder="Full Name">
+        <input type="text" id="titleInput" placeholder="Professional Title">
+        <input type="text" id="locationInput" placeholder="Location (e.g. Nairobi, Kenya)">
+        <input type="email" id="emailInput" placeholder="Email Address">
+
+        <textarea id="bioInput" placeholder="Short Professional Bio (1-2 lines)"></textarea>
+
+        <input type="text" id="skillsInput" placeholder="Skills (e.g. HTML, CSS, JavaScript)">
+        <input type="text" id="githubInput" placeholder="GitHub URL">
+        <input type="text" id="linkedinInput" placeholder="LinkedIn URL">
+        
+        <label>Choose Theme</label>
+        <select id="themeSelect">
+             <option value="dark">Dark Blue</option>
+             <option value="light">Light</option>
+             <option value="pastel">Pastel</option>
+             <option value="sunset">Sunset</option>
+             <option value="forest">Forest</option>
+             <option value="midnight">Midnight</option>
+        </select>
+
+        <select id="experienceInput">
+             <option value="">Experience Level</option>
+             <option value="student">Student</option>
+             <option value="junior">Junior Developer</option>
+             <option value="mid">Mid-Level</option>
+             <option value="senior">Senior</option>
+        </select>
+
+    
+        <label>Background Color</label>
+        <input type="color" id="bgColorPicker">
+
+        <label>Accent Color</label>
+        <input type="color" id="accentColorPicker">
+
+        <button id="resetBtn">Reset</button>
+        <button id="downloadBtn">Download Card</button>
+    </div>
+
+    
+    <div class="preview-section">
+        <div class="card" id="card">
+
+            <h2 id="cardName">Your Name</h2>
+            <h4 id="cardTitle">Your Title</h4>
+            <p id="cardLocation"></p>
+            <p id="cardEmail"></p>
+            <p id="cardExperience"></p>
+            <p id="cardBio">Your bio will appear here...</p>
+            <p id="cardGithub"></p>
+            <p id="cardLinkedin"></p>
+            
+            <div id="cardSkills"></div>
+
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
